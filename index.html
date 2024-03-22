@@ -1,0 +1,108 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+<?php if(isset($create)) : ?>
+  <div class="alert alert-primary" role="alert">
+      Вопрос отправлен!
+  </div>
+
+<?php endif; ?>
+
+    <div class="container">
+        <h3 class="card-title">Связаться с нами</h3>        
+        <form action="index.php" method="post">
+
+            <div class="form-group row">
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" name="name" id="name" placeholder="Имя" required>
+                </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+              </div>
+            </div>
+
+            <fieldset class="form-group">
+              <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0">Ваш пол</legend>
+                <div class="col-sm-10">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="male" value="m" checked>
+                    <label class="form-check-label">
+                      Мужской
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="female" value="f">
+                    <label class="form-check-label">
+                      Женский
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <label for="theme">Выберите тему</label>
+                    <select class="form-control" name="theme"  required>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <input type="file" id="file" name="file" accept="image/png, image/jpeg" required>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <label for="question">Задайте вопрос</label>
+                    <textarea class="form-control" name="question" id="question" rows="3" required></textarea>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="check">
+                        <label class="form-check-label" for="check">
+                        checkbox
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <button type="submit" class="btn btn-primary">Отправить</button>
+                <input class="btn btn-primary" type="reset" value="Обновить">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <a class="btn btn-primary" href="index.php?mode=table">Таблица</a>
+              </div>
+            </div>
+
+        </form>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+          
+</body>
+</html>
